@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
 
     private var currentQuestionIndex = 0
+    private var currentLevelIndex = 0
+
 
     private val lvl1 = listOf(
         Question("2 + 2 = ?", listOf("2", "4", "6"), 1),
@@ -29,9 +31,20 @@ class MainActivity : AppCompatActivity() {
         Question("6 + 4 = ?", listOf("8", "20", "10"), 2)
     )
 
+    private val lvl2 = listOf(
+        Question("2 + 4 = ?", listOf("6", "2", "4"), 0),
+        Question("4 + 4 = ?", listOf("4", "6", "8"), 2),
+        Question("6 + 4 = ?", listOf("8", "20", "10"), 2)
+    )
+
+
+
+    private val levelSequence = listOf(lvl1, lvl2)
+
 
     private fun loadQuestion(){
-        val currentQuestion = lvl1[currentQuestionIndex]
+        val currentLevel = levelSequence[currentLevelIndex]
+        val currentQuestion = currentLevel[currentQuestionIndex]
         exercise.text = currentQuestion.questionText
 
         btn1.text = currentQuestion.answers[0]
@@ -44,16 +57,21 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val currentQuestion = lvl1[currentQuestionIndex]
+        val currentLevel = levelSequence[currentLevelIndex]
+        val currentQuestion = currentLevel[currentQuestionIndex]
 
         if (selectedAnswerIndex == currentQuestion.correctAnswer) {
             currentQuestionIndex++
 
             if (currentQuestionIndex >= lvl1.size) {
                 exercise.text = "you won!"
-                btn1.visibility = View.GONE
+
                 btn2.visibility = View.GONE
                 btn3.visibility = View.GONE
+                currentLevelIndex++
+                btn1.text = "next level: "+currentQuestion.questionText
+
+
             } else {
                 loadQuestion()
             }
