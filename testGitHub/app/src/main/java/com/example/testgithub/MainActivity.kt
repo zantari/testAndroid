@@ -64,12 +64,12 @@ class MainActivity : AppCompatActivity() {
             currentQuestionIndex++
 
             if (currentQuestionIndex >= lvl1.size) {
-                exercise.text = "you won!"
+                exercise.text = "xxxyou won!"
 
                 btn2.visibility = View.GONE
                 btn3.visibility = View.GONE
                 currentLevelIndex++
-                btn1.text = "next level: "+currentQuestion.questionText
+                btn1.text = "next lxxevel: "+currentQuestion.questionText
 
 
             } else {
