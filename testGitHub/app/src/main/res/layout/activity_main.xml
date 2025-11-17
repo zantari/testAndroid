@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Wel"
+            android:text="Welcome at math brain prototype"
             android:textColor="@color/black"
             android:textSize="30sp" />
 
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:layout_weight="1"
-                android:text="kurwa kurwa" />
+                android:text="opcja1" />
 
             <Button
                 android:id="@+id/button2"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:layout_weight="1"
-                android:text="POZDRO Z budowlanki" />
+                android:text="opcja2" />
 
             <Button
                 android:id="@+id/button3"
@@ -60,7 +60,7 @@
                 android:layout_margin="15dp"
                 android:layout_weight="1"
 
-                android:text="aleks siema" />
+                android:text="opcja3" />
 
 
         </LinearLayout>
