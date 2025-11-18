@@ -1,6 +1,7 @@
 package com.example.testgithub
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btn2: Button
     private lateinit var btn3: Button
     private lateinit var exercise: TextView
+    private lateinit var menuBtn: Button
 
 
     private var currentQuestionIndex = 0
@@ -93,6 +95,12 @@ class MainActivity : AppCompatActivity() {
 
 
         startBtn = findViewById(R.id.startBtn)
+        menuBtn = findViewById(R.id.menuBtn);
+
+        menuBtn.setOnClickListener {
+            val intent = Intent(this@MainActivity, DrugaAktywnosc::class.java)
+            startActivity(intent)
+        }
 
 
 
@@ -102,6 +110,8 @@ class MainActivity : AppCompatActivity() {
             btn3 = findViewById(R.id.button3)
             exercise = findViewById(R.id.exercise)
             startBtn.visibility = View.GONE
+
+            menuBtn.visibility = View.GONE
 
             loadQuestion()
 

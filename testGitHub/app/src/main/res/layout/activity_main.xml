@@ -76,4 +76,15 @@
             android:text="START!!"
             android:textSize="30sp" />
 
+        <Button
+            android:id="@+id/menuBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#54D0DC"
+
+
+            android:text="MENU!"
+            android:textSize="30sp" />
+
     </LinearLayout> </FrameLayout>
