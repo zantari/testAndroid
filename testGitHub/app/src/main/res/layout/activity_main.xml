@@ -73,7 +73,7 @@
             android:backgroundTint="#3F923F"
 
 
-            android:text="START!"
+            android:text="START!!"
             android:textSize="30sp" />
 
     </LinearLayout> </FrameLayout>
